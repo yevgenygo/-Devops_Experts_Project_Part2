@@ -2,12 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('checkout code') {
             steps {
                 echo 'Building..'
             }
         }
-        stage('Test') {
+        stage('run restAPI') {
             steps {
                 echo 'Testing..'
             }
