@@ -96,6 +96,7 @@ def user(user_id):
 def stop_server():
     os.kill(os.getpid(), signal.CTRL_C_EVENT)
     return 'Server stopped'
+
 file_path = "example.txt"  # Specify the path to your file
 
 with open(file_path, 'w') as file:
