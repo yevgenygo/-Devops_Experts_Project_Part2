@@ -5,6 +5,8 @@
 from flask import Flask, request
 from pymysql.err import IntegrityError
 from db_connector import add_user, update_user, delete_user, get_user
+import os
+import signal
 
 app = Flask(__name__)
 
@@ -91,6 +93,9 @@ def user(user_id):
             return {'status': 'error', 'reason': 'no such id'}, 500  # status code
         else:
             return {'status': 'error', 'reason': 'other error'}, 500  # status code
-
+@app.route('/stop_server')
+def stop_server():
+    os.kill(os.getpid(), signal.CTRL_C_EVENT)
+    return 'Server stopped'
 
 app.run(host='127.0.0.1', debug=True, port=5000)
