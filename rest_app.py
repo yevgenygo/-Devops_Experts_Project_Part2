@@ -97,5 +97,13 @@ def stop_server():
     os.kill(os.getpid(), signal.CTRL_C_EVENT)
     return 'Server stopped'
 
+file_path = "example.txt"  # Specify the path to your file
+
+with open(file_path, 'w') as file:
+    file.write("Hello, World!\n")
+    file.write("This is a test.\n")
+
+print(f"Data written to {file_path}")
+
 app.run(host='127.0.0.1', debug=True, port=5000)
 
