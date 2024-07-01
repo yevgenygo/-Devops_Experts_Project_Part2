@@ -8,7 +8,7 @@ SCHEMA_NAME = 'devops_export'
 HOST_IP_ADDR = '127.0.0.1'
 PORT = 3306
 USER_NAME = 'root'
-PASSWD = 'Password1!'
+PASSWD = 'zuzikpuzik1!'
 DB_NAME = 'devops_export'
 
 
@@ -34,7 +34,6 @@ def add_user(user_id, username):
     cursor.execute(f"INSERT into {SCHEMA_NAME}.users (name, id) VALUES ('{username}', {user_id})")
     cursor.close()
     connect_to_db(False, db_connector)
-
 
 def update_user(user_id, username):
     # Establishing a connection to DB
