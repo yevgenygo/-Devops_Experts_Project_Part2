@@ -5,12 +5,12 @@ import pymysql
 
 #DB_Server_parameters
 SCHEMA_NAME = 'devops_export'
-HOST_IP_ADDR = '172.30.212.88'
+HOST_IP_ADDR = '192.168.14.183'
 PORT = 3306
 USER_NAME = 'root'
 PASSWD = 'zuzikpuzik1!'
 DB_NAME = 'devops_export'
-#da
+
 
 def connect_to_db(to_connect, conn=None):
     # Function establishes and disconnects from the predefined DB
