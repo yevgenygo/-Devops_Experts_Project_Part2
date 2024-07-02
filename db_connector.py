@@ -8,14 +8,14 @@ SCHEMA_NAME = 'devops_export'
 HOST_IP_ADDR = '127.0.0.1'
 PORT = 3306
 USER_NAME = 'root'
-PASSWD = 'zuzikpuzik1!'
+#PASSWD = 'zuzikpuzik1!'
 DB_NAME = 'devops_export'
 
 
 def connect_to_db(to_connect, passw, conn=None ):
     # Function establishes and disconnects from the predefined DB
     if to_connect:
-        db_connector = pymysql.connect(host=HOST_IP_ADDR, port=PORT, user=USER_NAME, passwd=PASSWD,
+        db_connector = pymysql.connect(host=HOST_IP_ADDR, port=PORT, user=USER_NAME, passwd=passw,
                                        db=DB_NAME)
         db_connector.autocommit(True)
         return (db_connector)
