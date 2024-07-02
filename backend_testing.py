@@ -2,8 +2,8 @@ import requests
 import db_connector
 from rest_requests import get_user,post_user
 
-USER_ID = 6
-USER_NAME = "test"
+USER_ID = 7
+USER_NAME = "test7"
 
 
 post_json, post_status = post_user(USER_ID,USER_NAME)
