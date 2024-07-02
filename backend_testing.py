@@ -2,7 +2,7 @@ import requests
 import db_connector
 from rest_requests import get_user,post_user
 
-USER_ID = 5
+USER_ID = 6
 USER_NAME = "test"
 
 
