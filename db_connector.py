@@ -5,7 +5,7 @@ import pymysql
 
 #DB_Server_parameters
 SCHEMA_NAME = 'devops_export'
-HOST_IP_ADDR = '127.0.0.1'
+HOST_IP_ADDR = '172.30.212.88'
 PORT = 3306
 USER_NAME = 'root'
 PASSWD = 'zuzikpuzik1!'
