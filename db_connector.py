@@ -10,7 +10,7 @@ PORT = 3306
 USER_NAME = 'root'
 PASSWD = 'zuzikpuzik1!'
 DB_NAME = 'devops_export'
-
+#da
 
 def connect_to_db(to_connect, conn=None):
     # Function establishes and disconnects from the predefined DB
