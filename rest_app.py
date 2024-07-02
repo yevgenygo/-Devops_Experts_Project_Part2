@@ -45,7 +45,10 @@ def user(user_id):
             print("arg0= ", sys.argv[0])
             print("arg1= ", sys.argv[1])
             arg1 = sys.argv[1]
-            add_user(user_id, user_name, arg1)
+            passw = arg1.split(',')
+            passwd = passw[2]
+
+            add_user(user_id, user_name, passwd)
             return {'status': 'ok', 'user_added': user_name}, 200  # status code
         except IntegrityError as err:
             message = (err.args[1])
