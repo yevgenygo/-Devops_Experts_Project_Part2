@@ -42,8 +42,6 @@ def user(user_id):
     if request.method == 'POST':
         user_name = get_user_name_from_input_json(request.json)
         try:
-            print("arg0= ", sys.argv[0])
-            print("arg1= ", sys.argv[1])
             arg1 = sys.argv[1]
             passw = arg1.split(',')
             passwd = passw[2]
