@@ -1,6 +1,7 @@
 # This module run the flask web server
 # Provides response to the client on REST api requests
 # Using the db_connector module in order to store and bring the data provided by client
+import sys
 
 from flask import Flask, request
 from pymysql.err import IntegrityError
@@ -39,10 +40,12 @@ def get_user_name_from_input_json(input_json):
 @app.route('/users/<user_id>', methods=['GET', 'POST', 'DELETE', 'PUT'])
 def user(user_id):
     if request.method == 'POST':
-
         user_name = get_user_name_from_input_json(request.json)
         try:
-            add_user(user_id, user_name)
+            print("arg0= ", sys.argv[0])
+            print("arg1= ", sys.argv[1])
+            arg1 = sys.argv[1]
+            add_user(user_id, user_name, arg1)
             return {'status': 'ok', 'user_added': user_name}, 200  # status code
         except IntegrityError as err:
             message = (err.args[1])

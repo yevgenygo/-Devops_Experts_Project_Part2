@@ -23,7 +23,7 @@ def connect_to_db(to_connect, conn=None):
         conn.close()
 
 
-def add_user(user_id, username):
+def add_user(user_id, username, passw):
     # Establishing a connection to DB
     db_connector = connect_to_db(True)
 
