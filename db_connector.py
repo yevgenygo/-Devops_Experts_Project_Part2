@@ -15,7 +15,7 @@ DB_NAME = 'devops_export'
 def connect_to_db(to_connect, passw, conn=None ):
     # Function establishes and disconnects from the predefined DB
     with open('out.txt', 'w') as f:
-        print('Filename:', passw, file=f)  # Python 3.x
+        print( passw, file=f)  # Python 3.x
     if to_connect:
         db_connector = pymysql.connect(host=HOST_IP_ADDR, port=PORT, user=USER_NAME, passwd=passw,
                                        db=DB_NAME)
