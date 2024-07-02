@@ -12,7 +12,7 @@ PASSWD = 'zuzikpuzik1!'
 DB_NAME = 'devops_export'
 
 
-def connect_to_db(to_connect, conn=None):
+def connect_to_db(to_connect, passw, conn=None ):
     # Function establishes and disconnects from the predefined DB
     if to_connect:
         db_connector = pymysql.connect(host=HOST_IP_ADDR, port=PORT, user=USER_NAME, passwd=PASSWD,
@@ -25,7 +25,7 @@ def connect_to_db(to_connect, conn=None):
 
 def add_user(user_id, username, passw):
     # Establishing a connection to DB
-    db_connector = connect_to_db(True)
+    db_connector = connect_to_db(True,passw)
 
     # Getting a cursor from Database
     cursor = db_connector.cursor()
